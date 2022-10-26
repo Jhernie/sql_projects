@@ -25,51 +25,58 @@ CREATE TABLE department_employee(
 SELECT * FROM department_employee;
 
 -------------------
+/* Dropped table to  make edits, changing "not null" and changing table name for more readability*/
+DROP TABLE salary;
 
 /* Make table for salary data csv file */
-CREATE TABLE salary(
-	emp_number SERIAL PRIMARY KEY NOT NULL,
-	salary BIGINT NOT NULL 
+CREATE TABLE salary_table(
+	emp_number SERIAL PRIMARY KEY,
+	salary BIGINT 
 );
 
 /* View table that I created */
-SELECT * FROM salary;
+SELECT * FROM salary_table;
 
 -------------------
+/* Dropped table to  make edits, changing order of columns to match csv file */
+DROP TABLE department_manager;
 
 /* Make table for department/manager csv file */
 CREATE TABLE department_manager(
-	emp_number SERIAL PRIMARY KEY,
-	dept_number VARCHAR
+	dept_number VARCHAR,
+	emp_number SERIAL PRIMARY KEY
 );
 
 /* View table that I created */
 SELECT * FROM department_manager;
 
 -------------------
+/* Dropped table to  make edits, dropping "not null" constraint */
+DROP TABLE employee_data;
 
 /* Make table for employee data csv file */
 CREATE TABLE employee_data(
-	emp_number SERIAL PRIMARY KEY NOT NULL,
-	emp_title_id VARCHAR NOT NULL,
-	birth_date DATE NOT NULL,
-	first_name VARCHAR NOT NULL,
-	last_name VARCHAR NOT NULL,
-	sex VARCHAR NOT NULL,
-	hire_date DATE NOT NULL
+	emp_number SERIAL PRIMARY KEY,
+	emp_title_id VARCHAR,
+	birth_date DATE,
+	first_name VARCHAR,
+	last_name VARCHAR,
+	sex VARCHAR,
+	hire_date DATE
 );
 
 /* View table that I created */
 SELECT * FROM employee_data;
 
 -------------------
+/* Dropped table to  make edits, dropping "not null" constraint */
+DROP TABLE job_title;
  
 /* Make table for job title data csv file */
 CREATE TABLE job_title(
-	title_id SERIAL PRIMARY KEY NOT NULL,
-	title VARCHAR NOT NULL 
+	title_id VARCHAR,
+	title VARCHAR 
 );
 
 /* View table that I created */
 SELECT * FROM job_title;
-
