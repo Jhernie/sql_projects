@@ -1,3 +1,6 @@
+---ADD FOREIGN KEY!!
+
+
 /* Dropped table to rename it and make edits, since i was unable to import data on first try */
 DROP TABLE departments;
 
